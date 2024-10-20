@@ -1,11 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
-import cookie from "cookie-parser";
+import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
 import connectToMongoDb from "./db/connectToMongoDb.js";
-import cookieParser from "cookie-parser";
 
 const app = express();
 
