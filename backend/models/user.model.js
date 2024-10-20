@@ -1,30 +1,32 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-    fullname:{
-        type:String,
-        required:true
+const userSchema = new mongoose.Schema(
+  {
+    fullname: {
+      type: String,
+      required: true,
     },
-    username:{
-        type:String,
-        required:true,
-        minlength:6
+    username: {
+      type: String,
+      required: true,
+      minlength: 6,
     },
-    password:{
-        type:String,
-        required:true
+    password: {
+      type: String,
+      required: true,
     },
-    gender:{
-        type:String,
-        required:true,
-        enum: ["male","female"]
+    gender: {
+      type: String,
+      required: true,
+      enum: ["male", "female"],
     },
-    profilePic:{
-        type:String,
-        default:''
+    profilePic: {
+      type: String,
+      default: '',
     },
-    //gives created at and updated at info
-},{timestamps:true})
+  },
+  { timestamps: true } // Enable createdAt and updatedAt timestamps
+);
 
 const User = mongoose.model("User", userSchema);
 

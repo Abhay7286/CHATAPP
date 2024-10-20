@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 
-const protectRoute = async(req,res) => {
+const protectRoute = async(req,res,next) => {
   try {
     const token = req.cookies.jwt;
 
@@ -26,6 +26,12 @@ const protectRoute = async(req,res) => {
 
   } catch (error) {
     console.log("error in protectRoute controller",error.message)
+
+    // Handle token expiration specifically
+    if (error.name === "TokenExpiredError") {
+      return res.status(401).json({ error: "Unauthorized: token expired" });
+    }
+
     return res.status(500).json({error:"internal server error"})
   }
 }
