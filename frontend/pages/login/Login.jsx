@@ -1,48 +1,54 @@
+import { Link } from 'react-router-dom';
+import './Login.css'; // Add this line to link to your CSS file
+
 const Login = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+  };
+
   return (
-    <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
-			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-blue-400'>
-					Login
-					<span className='text-blue-500'> TUXCHAT</span>
-				</h1>
+    <div className="login-container">
+      <div className="login-box">
+        <h1 className="login-title">
+          Welcome to
+          <span className="login-highlight"> TUXCHAT</span>
+        </h1>
 
-				<form >
-					<div>
-						<label className='label p-2'>
-							<span className='text-base label-text'>Username</span>
-						</label>
-						<input
-							type='text'
-							placeholder='Enter username'
-							className='w-full input input-bordered h-10'
-							value={username}
-						/>
-					</div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label className="label">Username</label>
+            <input
+              type="text"
+              placeholder="Enter your username"
+              className="input"
+              required
+            />
+          </div>
 
-					<div>
-						<label className='label'>
-							<span className='text-base label-text'>Password</span>
-						</label>
-						<input
-							type='password'
-							placeholder='Enter Password'
-							className='w-full input input-bordered h-10'
-							value={password}
-						/>
-					</div>
-					<Link to='/signup' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
-						{"Don't"} have an account?
-					</Link>
+          <div className="form-group">
+            <label className="label">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              className="input"
+              required
+            />
+          </div>
 
-					<div>
-						<button className='btn btn-block btn-sm mt-2'>Login</button>
-					</div>
-				</form>
-			</div>
-		</div>
-  )
-}
+          <Link to="/signup" className="signup-link">
+            Don’t have an account? Sign up
+          </Link>
 
-export default Login
+          <div>
+            <button type="submit" className="login-button">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
+export default Login;
