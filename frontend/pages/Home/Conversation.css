@@ -1,0 +1,38 @@
+.conversation {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1); /* Glassy effect */
+  backdrop-filter: blur(8px); /* Blur background */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.conversation:hover {
+  background: rgba(255, 255, 255, 0.2); /* Darker on hover */
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #fff;
+}
+
+.user-emoji {
+  font-size: 18px;
+  color: #ffcc00;
+}
