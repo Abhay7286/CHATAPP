@@ -3,6 +3,8 @@ import './App.css';
 // import Login from '../pages/login/Login.jsx';
 // import Signup from '../pages/signup/Signup.jsx';
 import Home from '../pages/Home/home.jsx';
+import './index.css';  // Path to your Tailwind-included CSS file
+
 
 function App() {
   return (

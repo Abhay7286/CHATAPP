@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Sidebar from './Sidebar';
-import MessageContainer from './MessageContainer';
+import Sidebar from '../sidebar/Sidebar.jsx';
+import MessageContainer from './messagecontainer/MessageContainer.jsx';
 import './Home.css';
 
 const Home = () => {
-  const [selectedUser, setSelectedUser] = useState('User 1'); // Default selected user
+  const [selectedUser, setSelectedUser] = useState('User 1'); 
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
