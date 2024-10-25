@@ -1,72 +1,30 @@
-.chat-area {
-    flex: 1;
+.message-container {
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1); /* Set to very light transparency */
-    backdrop-filter: blur(15px); /* Increase blur for a stronger glass effect */
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px;
-    border-radius: 10px; /* Optional: for rounded corners */
-  }
-  
-  /* Messages container */
-  .messages {
-    flex: 1;
-    padding: 20px;
+    width: 80vw;
+    max-width: 600px;
+    height: 100vh;
     overflow-y: auto;
-  }
-  
-  /* Individual messages */
-  .message {
-    margin-bottom: 15px;
-    max-width: 60%;
-    padding: 10px;
-    border-radius: 10px;
-    color: white; /* Text color for better visibility */
-  }
-  
-  /* Style for sent messages */
-  .sent {
-    background-color: rgba(79, 70, 229, 0.8); /* Semi-transparent purple */
-    margin-left: auto; /* Align sent messages to the right */
-  }
-  
-  /* Style for received messages */
-  .received {
-    background-color: rgba(75, 85, 99, 0.8); /* Semi-transparent gray */
-    color: white; /* Ensure the text is white */
-  }
-  
-  /* Message input area */
-  .message-input {
-    display: flex;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2); /* Transparent background for the input area */
-    border-radius: 10px; /* Rounded corners for input area */
-  }
-  
-  /* Input field styles */
-  .input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
-    border-radius: 5px;
-    margin-right: 10px;
-    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background for input */
-    color: white; /* Input text color */
-  }
-  
-  /* Send button styles */
-  .send-button {
-    padding: 10px 20px;
-    background-color: rgba(79, 70, 229, 1); /* Solid color for visibility */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .send-button:hover {
-    background-color: rgba(63, 57, 194, 1); /* Darker shade on hover */
-  }
-  
+    border-radius: 20px;
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional styling for scrollbar */
+.message-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}

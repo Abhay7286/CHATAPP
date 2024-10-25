@@ -1,13 +1,12 @@
 import React from 'react';
-import './MessageContainer.css';
 import Messages from './Messages.jsx';
+import './MessageContainer.css';
 
 const MessageContainer = ({ selectedUser }) => {
   return (
-    <>
-      <Messages/>
-    </>
-      
+    <div className="message-container">
+      <Messages />
+    </div>
   );
 };
 
