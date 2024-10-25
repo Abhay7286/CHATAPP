@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchInput from './SearchInput.jsx';
 import Logout from './Logout.jsx';
-import Conversations from './Conversations.jsx';
+import Conversations from '../conversation/Conversations.jsx';
 import './Sidebar.css';
 
 const Sidebar = ({ users = [], onUserClick, onLogout }) => {

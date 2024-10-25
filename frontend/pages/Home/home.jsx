@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from '../sidebar/Sidebar.jsx';
+import Sidebar from './sidebar/Sidebar.jsx';
 import MessageContainer from './messagecontainer/MessageContainer.jsx';
 import './Home.css';
 

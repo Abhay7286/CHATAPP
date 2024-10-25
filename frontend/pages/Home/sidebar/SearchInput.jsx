@@ -4,7 +4,7 @@ import './SearchInput.css'
 
 const SearchInput = () => {
   return (
-    <div className="search-container mb-4">
+    <div className="search-container ">
       <input
         type="text"
         placeholder="Search users..."
