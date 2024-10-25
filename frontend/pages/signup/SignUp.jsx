@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
-import './Signup.css'; // Add this line to link to your CSS file
+import './Signup.css'; 
+import { useState } from 'react';
 
 const Signup = () => {
+
+  const [inputs, setInputs] = useState({
+    fullName:"",
+    username:"",
+    password:"",
+    confirmPassword:"",
+    gender:""
+  })
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted');
@@ -23,7 +32,7 @@ const Signup = () => {
               type="text"
               placeholder="Enter your full name"
               className="input"
-              required
+              required value={inputs.fullName} onChange={(e) =>setInputs({...inputs, fullName:e.target.value})}
             />
           </div>
 
@@ -34,7 +43,7 @@ const Signup = () => {
               type="text"
               placeholder="Choose a username"
               className="input"
-              required
+              required value={inputs.username} onChange={(e) =>setInputs({...inputs,username:e.target.value})}
             />
           </div>
 
@@ -45,7 +54,7 @@ const Signup = () => {
               type="password"
               placeholder="Enter your password"
               className="input"
-              required
+              required value={inputs.password} onChange={(e) =>setInputs({...inputs,password:e.target.value})}
             />
           </div>
 
@@ -56,7 +65,7 @@ const Signup = () => {
               type="password"
               placeholder="Confirm your password"
               className="input"
-              required
+              required value={inputs.confirmPassword} onChange={(e) =>setInputs({...inputs,confirmPassword:e.target.value})}
             />
           </div>
 

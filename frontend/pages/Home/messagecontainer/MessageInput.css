@@ -1,0 +1,46 @@
+.message-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 90%;
+    position: relative;
+    bottom: -11em;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    position: absolute;
+}
+
+.message-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.send-button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+    margin-left: 37em;
+    display: flex;
+    align-items: center;
+}
+
+.send-button:hover {
+    color: #1da1f2; /* Hover effect */
+}

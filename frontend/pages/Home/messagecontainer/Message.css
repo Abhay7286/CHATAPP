@@ -1,51 +1,53 @@
 /* Message.css */
 
 .chat {
-    margin: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px;
-    border-radius: 15px;
-    width: fit-content;
-    backdrop-filter: blur(8px);
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff; /* White text for visibility */
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 75%;
+}
+
+.chat-start {
+    align-self: flex-start;
+}
+
+.chat-end {
+    align-self: flex-end;
+    text-align: right;
 }
 
 .chat-header {
     font-size: 0.9em;
-    font-weight: bold;
-    color: #fff;
+    color: #ddd;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-}
-
-.chat-sender {
-    color: #e0e0e0;
-}
-
-.chat-time {
-    font-size: 0.8em;
-    color: #b0b0b0;
-    margin-left: auto;
+    margin-bottom: 5px;
 }
 
 .chat-bubble {
     padding: 10px;
-    border-radius: 10px;
-    margin: 5px 0;
-    background: rgba(255, 255, 255, 0.1); /* Lighter bubble color */
+    border-radius: 15px;
     font-size: 1em;
+    color: #fff;
+}
+
+.from-contact {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 15px 15px 15px 0;
+}
+
+.from-me {
+    background: #1da1f2;
+    color: #fff;
+    border-radius: 15px 15px 0 15px;
 }
 
 .chat-footer {
     font-size: 0.8em;
     color: #a0a0a0;
     margin-top: 5px;
-    text-align: right;
-    width: 100%;
 }
