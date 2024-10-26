@@ -1,19 +1,23 @@
 import { Link } from 'react-router-dom';
 import './Signup.css'; 
 import { useState } from 'react';
+import UseSignUp from '../../hooks/UseSignUp';
 
 const Signup = () => {
 
   const [inputs, setInputs] = useState({
-    fullName:"",
-    username:"",
-    password:"",
-    confirmPassword:"",
-    gender:""
-  })
+    fullName: "",
+    username: "",
+    password: "",
+    confirmPassword: "",
+    gender: ""
+  });
+
+  const {loading,Signup} = UseSignUp()
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted');
+    console.log(inputs);
   };
 
   return (
@@ -32,7 +36,9 @@ const Signup = () => {
               type="text"
               placeholder="Enter your full name"
               className="input"
-              required value={inputs.fullName} onChange={(e) =>setInputs({...inputs, fullName:e.target.value})}
+              required 
+              value={inputs.fullName} 
+              onChange={(e) => setInputs({...inputs, fullName: e.target.value})}
             />
           </div>
 
@@ -43,7 +49,9 @@ const Signup = () => {
               type="text"
               placeholder="Choose a username"
               className="input"
-              required value={inputs.username} onChange={(e) =>setInputs({...inputs,username:e.target.value})}
+              required 
+              value={inputs.username} 
+              onChange={(e) => setInputs({...inputs, username: e.target.value})}
             />
           </div>
 
@@ -54,7 +62,9 @@ const Signup = () => {
               type="password"
               placeholder="Enter your password"
               className="input"
-              required value={inputs.password} onChange={(e) =>setInputs({...inputs,password:e.target.value})}
+              required 
+              value={inputs.password} 
+              onChange={(e) => setInputs({...inputs, password: e.target.value})}
             />
           </div>
 
@@ -65,7 +75,9 @@ const Signup = () => {
               type="password"
               placeholder="Confirm your password"
               className="input"
-              required value={inputs.confirmPassword} onChange={(e) =>setInputs({...inputs,confirmPassword:e.target.value})}
+              required 
+              value={inputs.confirmPassword} 
+              onChange={(e) => setInputs({...inputs, confirmPassword: e.target.value})}
             />
           </div>
 
@@ -74,13 +86,37 @@ const Signup = () => {
             <label className="label">Gender</label>
             <div className="gender-options">
               <label>
-                <input type="radio" name="gender" value="male" required /> <p>Male</p>
+                <input 
+                  type="radio" 
+                  name="gender" 
+                  value="male" 
+                  required 
+                  checked={inputs.gender === "male"} 
+                  onChange={(e) => setInputs({...inputs, gender: e.target.value})} 
+                /> 
+                <p>Male</p>
               </label>
               <label>
-                <input type="radio" name="gender" value="female" required /> <p>Female</p>
+                <input 
+                  type="radio" 
+                  name="gender" 
+                  value="female" 
+                  required 
+                  checked={inputs.gender === "female"} 
+                  onChange={(e) => setInputs({...inputs, gender: e.target.value})} 
+                /> 
+                <p>Female</p>
               </label>
               <label>
-                <input type="radio" name="gender" value="other" required /> <p>other</p>
+                <input 
+                  type="radio" 
+                  name="gender" 
+                  value="other" 
+                  required 
+                  checked={inputs.gender === "other"} 
+                  onChange={(e) => setInputs({...inputs, gender: e.target.value})} 
+                /> 
+                <p>Other</p>
               </label>
             </div>
           </div>
