@@ -13,12 +13,15 @@ const Signup = () => {
     gender: ""
   });
 
-  const {loading,Signup} = UseSignUp()
+  const {loading,signUp} = UseSignUp()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputs);
-  };
+    console.log("Inputs before signUp:", inputs);
+    signUp(inputs);
+};
+
+
 
   return (
     <div className="signup-container">

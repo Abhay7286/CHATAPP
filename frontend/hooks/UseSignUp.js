@@ -4,10 +4,11 @@ import toast from 'react-hot-toast'
 const UseSignUp = () => {
   const [loading, setloading] = useState(false)
   const signUp = async ({fullName,username,password,confirmPassword,gender}) => {
-    const sucess = handleInputErrors({fullName,username,password,confirmPassword,gender})
-    if(!sucess) return;
+    const success = handleInputErrors({fullName,username,password,confirmPassword,gender})
+    if(!success) return;
 
-    setloading = true
+    setloading(true)
+    
     try {
       const res = await fetch("/api/auth/signup",{
         method: "POST",
@@ -35,7 +36,7 @@ function handleInputErrors({fullName,username,password,confirmPassword,gender}) 
     toast.error("please fill in all fields")
     return false
   }
-  if(password!=confirmPassword){
+  if(password!==confirmPassword){
     toast.error("passwords do not match")
     return false
   }
