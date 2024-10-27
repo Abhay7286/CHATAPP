@@ -1,9 +1,19 @@
 import React from 'react';
 import { FiLogOut } from "react-icons/fi";
+import { FaSpinner } from "react-icons/fa";
+import UseLogout from '../../../hooks/UseLogout';
 
-const Logout = ({ onLogout }) => {
+const Logout = () => {
+  const { loading, logout } = UseLogout();
+
   return (
-    <FiLogOut className="logout-button" onClick={onLogout} />
+    <>
+      {!loading ? (
+        <FiLogOut className="logout-button" onClick={logout} />
+      ) : (
+        <FaSpinner className='spinner'/>
+      )}
+    </>
   );
 };
 

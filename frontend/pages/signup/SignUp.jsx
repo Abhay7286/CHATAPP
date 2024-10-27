@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './Signup.css'; 
 import { useState } from 'react';
 import UseSignUp from '../../hooks/UseSignUp';
+import {FaSpinner} from "react-hot-toast";
 
 const Signup = () => {
 
@@ -15,10 +16,10 @@ const Signup = () => {
 
   const {loading,signUp} = UseSignUp()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log("Inputs before signUp:", inputs);
-    signUp(inputs);
+    await signUp(inputs);
 };
 
 
@@ -131,8 +132,8 @@ const Signup = () => {
 
           {/* Signup Button */}
           <div>
-            <button type="submit" className="signup-button">
-              Sign Up
+            <button type="submit" className="signup-button" disabled={loading}>
+              {loading?<FaSpinner className="spinner" />:"Sign Up"}
             </button>
           </div>
         </form>
