@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom';
-import './Login.css'; // Add this line to link to your CSS file
+import './Login.css'; 
+import UseLogin from '../../hooks/UseLogin';
+import { FaSpinner } from "react-icons/fa";
+import { useState } from 'react';
 
 const Login = () => {
-  const handleSubmit = (e) => {
+  
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const {login,loading} = UseLogin()
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted');
+    await login(username,password)
   };
+
 
   return (
     <div className="login-container">
@@ -22,7 +31,8 @@ const Login = () => {
               type="text"
               placeholder="Enter your username"
               className="input"
-              required
+              required value={username}
+              onChange={(e)=> setUsername(e.target.value) }
             />
           </div>
 
@@ -32,7 +42,8 @@ const Login = () => {
               type="password"
               placeholder="Enter your password"
               className="input"
-              required
+              required  value={password}
+              onChange={(e)=> setPassword(e.target.value) }
             />
           </div>
 
@@ -41,8 +52,8 @@ const Login = () => {
           </Link>
 
           <div>
-            <button type="submit" className="login-button">
-              Login
+            <button type="submit" className="login-button" disabled={loading}>
+              {loading?<FaSpinner className='spinner'/>:"Login"}
             </button>
           </div>
         </form>

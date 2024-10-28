@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './Signup.css'; 
 import { useState } from 'react';
 import UseSignUp from '../../hooks/UseSignUp';
-import {FaSpinner} from "react-hot-toast";
+import { FaSpinner } from "react-icons/fa";
 
 const Signup = () => {
 
