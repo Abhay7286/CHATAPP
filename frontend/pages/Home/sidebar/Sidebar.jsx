@@ -9,7 +9,7 @@ const Sidebar = ({ users = [], onUserClick, onLogout }) => {
     <div className="sidebar">
       <SearchInput />
       <Conversations users={users} onUserClick={onUserClick} />
-      <Logout onLogout={onLogout} />
+      <Logout onLogout={onLogout} className="logout-button" />
     </div>
   );
 };
