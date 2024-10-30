@@ -1,5 +1,3 @@
-/* MessageContainer.css */
-
 .message-container {
     display: flex;
     flex-direction: column;
@@ -17,7 +15,10 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-
+.header{
+    position: absolute;
+    color: white;
+}
 .no-chat {
     display: flex;
     flex-direction: column;
@@ -27,12 +28,10 @@
     color: #ccc;
     text-align: center;
 }
-
 .chat-icon {
     color: #ccc;
     margin-bottom: 10px;
 }
-
 .no-chat-message {
     font-size: 1.2em;
     color: #bbb;

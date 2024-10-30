@@ -10,8 +10,9 @@
   transition: background 0.3s ease;
 }
 
-.conversation:hover {
-  background: rgba(255, 255, 255, 0.2); /* Darker on hover */
+
+.sky{
+  background-color: skyblue;
 }
 
 .profile-pic {

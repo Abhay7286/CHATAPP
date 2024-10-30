@@ -1,15 +1,23 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Messages from './Messages.jsx';
 import './MessageContainer.css';
 import MessageInput from './MessageInput.jsx';
 import { FiMessageCircle } from 'react-icons/fi';
+import useConversation from '../../../zustand/UseConversation.js';
 
 const MessageContainer = ({ selectedUser }) => {
-  selectedUser = false
+  const {selectedConversation,setSelectedConversation} = useConversation()
+
+  useEffect(() => {
+    //cleanup function (unmounts)
+    return () => setSelectedConversation(null)
+  }, [setSelectedConversation])
+  
   return (
     <div className="message-container">
-      {selectedUser ? (
+      {selectedConversation ? (
         <>
+          <span className='header'>{selectedConversation.fullname}</span>
           <Messages />
           <MessageInput />
         </>
