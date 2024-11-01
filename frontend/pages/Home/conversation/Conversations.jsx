@@ -14,7 +14,7 @@ const Conversations = ({ onUserClick }) => {
       <h2 className="user-list-title">Contacts</h2>
       {conversations.map((conversation,idx) => (
         <Conversation
-          key={conversations._id}
+          key={conversation._id}
           conversation={conversation}
           profilePic={conversation.profilePic}
           emoji={getRandomEmoji()}

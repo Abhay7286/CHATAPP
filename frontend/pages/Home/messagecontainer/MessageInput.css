@@ -40,6 +40,10 @@
     display: flex;
     align-items: center;
 }
+.send-button > svg{
+    position: relative;
+    left: -1em;
+}
 
 .send-button:hover {
     color: #1da1f2; /* Hover effect */

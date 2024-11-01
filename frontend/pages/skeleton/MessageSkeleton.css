@@ -1,0 +1,41 @@
+/* MessageSkeleton.css */
+
+.message-skeleton-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.message-skeleton-row.reverse {
+  justify-content: flex-end;
+}
+
+.skeleton {
+  background-color: #e0e0e0;
+  animation: shimmer 1.5s infinite linear;
+  opacity: 0.8;
+}
+
+.avatar-skeleton {
+  width: 78px; /* Increased width */
+  height: 78px; /* Increased height for consistency */
+  border-radius: 50%;
+}
+
+.message-skeleton-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.line-skeleton {
+  height: 16px;
+  width: 300px; /* Increased width */
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -100px; }
+  100% { background-position: 100px; }
+}

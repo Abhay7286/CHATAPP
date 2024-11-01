@@ -1,41 +1,24 @@
-import React from 'react';
 import './Message.css'; 
+import { useAuthContext } from '../../../context/AuthContext';
+import { formatMessageTime } from '../../../utils/date'; // Import the utility function
 
-const Message = () => {
-    const messages = [
-        {
-            id: 1,
-            sender: 'Obi-Wan Kenobi',
-            time: '2 hours ago',
-            text: 'You were the Chosen One!',
-            status: 'Seen',
-            fromMe: false,  // Message from the contact
-        },
-        {
-            id: 2,
-            sender: 'You',
-            time: '1 hour ago',
-            text: 'I loved you.',
-            status: 'Delivered',
-            fromMe: true,  // Message from the user
-        },
-    ];
+const Message = ({ message }) => {
+    const { authUser } = useAuthContext();
+    const fromMe = message.senderId === authUser._id;
+    const ChatClassName = fromMe ? 'chat-end' : 'chat-start';
+    const ChatBubble = fromMe ? 'from-me' : 'from-contact';
 
     return (
-        <>
-            {messages.map((msg) => (
-                <div key={msg.id} className={`chat ${msg.fromMe ? 'chat-end' : 'chat-start'}`}>
-                    <div className="chat-header">
-                        <span className="chat-sender">{msg.sender}</span>
-                        <time className="chat-time">{msg.time}</time>
-                    </div>
-                    <div className={`chat-bubble ${msg.fromMe ? 'from-me' : 'from-contact'}`}>
-                        {msg.text}
-                    </div>
-                    <div className="chat-footer">{msg.status}</div>
-                </div>
-            ))}
-        </>
+        <div className={`chat ${ChatClassName}`}>
+            <div className="chat-header">
+                <span className="chat-sender">{fromMe ? 'You' : message.sender}</span>
+                <time className="chat-time">{formatMessageTime(message.createdAt)}</time> 
+            </div>
+            <div className={`chat-bubble ${ChatBubble}`}>
+                {message.message}
+            </div>
+            <div className="chat-footer">{message.status}</div>
+        </div>
     );
 };
 
