@@ -111,17 +111,6 @@ const Signup = () => {
                 /> 
                 <p>Female</p>
               </label>
-              <label>
-                <input 
-                  type="radio" 
-                  name="gender" 
-                  value="other" 
-                  required 
-                  checked={inputs.gender === "other"} 
-                  onChange={(e) => setInputs({...inputs, gender: e.target.value})} 
-                /> 
-                <p>Other</p>
-              </label>
             </div>
           </div>
 
