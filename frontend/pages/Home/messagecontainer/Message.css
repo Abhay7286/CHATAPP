@@ -1,10 +1,8 @@
+/* General Chat Styling */
 .chat {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    margin: 10px 0;
     max-width: 75%;
+    padding: 10px;
+    margin: 5px 0;
 }
 
 .chat-start {
@@ -16,6 +14,7 @@
     text-align: right;
 }
 
+/* Chat Header Styling */
 .chat-header {
     font-size: 0.9em;
     color: #ddd;
@@ -24,28 +23,78 @@
     margin-bottom: 5px;
 }
 
+.chat-time {
+    margin-left: auto;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* Chat Bubble Styling */
 .chat-bubble {
     padding: 10px;
     border-radius: 15px;
     font-size: 1em;
     color: #fff;
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: anywhere; /* Handle long messages gracefully */
 }
 
+/* Styling for Messages Sent by Contact */
 .from-contact {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.5); /* Improved contrast */
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(8px);
+    color: #fff;
     border-radius: 15px 15px 15px 0;
 }
 
+/* Styling for Messages Sent by User */
 .from-me {
     background: #1da1f2;
     color: #fff;
     border-radius: 15px 15px 0 15px;
 }
 
+/* Chat Footer */
 .chat-footer {
     font-size: 0.8em;
     color: #a0a0a0;
     margin-top: 5px;
+}
+
+/* Scrollbar Styling */
+.scrollable-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .chat {
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+    .chat-bubble {
+        font-size: 0.9em; /* Reduce font size */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

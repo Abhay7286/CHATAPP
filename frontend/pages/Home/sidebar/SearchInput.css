@@ -5,8 +5,13 @@
     gap: 5px;
 }
 .search-icon{
-    font-size: 5em;
+    font-size: 3em;
 }
+.search-btn{
+  background: none;
+  border: none;
+}
+
 .search-container {
   width: 100%;
   padding: 0 10px;

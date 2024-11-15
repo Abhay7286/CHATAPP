@@ -25,12 +25,10 @@
 
 .logout-button {
   cursor: pointer;
-  padding: 8px;
   transition: background-color 0.3s ease;
-  position: absolute;
-  bottom: -12em;
-  font-size: 20px;
-  margin: -3em 0;
+  position: fixed;
+  bottom: 21em;
+  font-size: 23px;
 }
 
 .logout-button:hover {

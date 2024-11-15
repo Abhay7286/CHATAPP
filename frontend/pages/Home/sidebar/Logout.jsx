@@ -9,7 +9,9 @@ const Logout = () => {
   return (
     <>
       {!loading ? (
-        <FiLogOut className="logout-button" onClick={logout} />
+        <div className='logout-box'>
+          <FiLogOut className="logout-button" onClick={logout} />
+        </div>
       ) : (
         <FaSpinner className='spinner'/>
       )}

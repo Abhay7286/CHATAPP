@@ -7,10 +7,11 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 10px auto;
     width: 90%;
-    position: relative;
-    bottom: -11em;
+    /* position: fixed;
+    bottom: 0em;
+    left: 22px; */
 }
 
 .message-input {
@@ -42,9 +43,9 @@
 }
 .send-button > svg{
     position: relative;
-    left: -1em;
+    left: -3em;
 }
 
 .send-button:hover {
-    color: #1da1f2; /* Hover effect */
+    color: #1da1f2; 
 }
