@@ -6,12 +6,12 @@
 }
 
 .chat-start {
-    align-self: flex-start;
+    justify-self: start;
 }
 
 .chat-end {
-    align-self: flex-end;
     text-align: right;
+    justify-self: end;
 }
 
 /* Chat Header Styling */
@@ -21,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .chat-time {

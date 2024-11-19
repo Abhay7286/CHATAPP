@@ -34,7 +34,9 @@
 
 .user-info {
   display: flex;
-  flex-direction: column;
+  gap: 6em;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-name {

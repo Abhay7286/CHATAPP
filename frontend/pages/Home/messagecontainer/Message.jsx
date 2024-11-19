@@ -7,6 +7,7 @@ const Message = ({ message }) => {
     const fromMe = message.senderId === authUser._id;
     const ChatClassName = fromMe ? 'chat-end' : 'chat-start';
     const ChatBubble = fromMe ? 'from-me' : 'from-contact';
+    const shakeClass = message.shouldShake ? "shake" : "";
 
     return (
         <div className={`chat ${ChatClassName}`}>
@@ -14,7 +15,7 @@ const Message = ({ message }) => {
                 <span className="chat-sender">{fromMe ? 'You' : message.sender}</span>
                 <time className="chat-time">{formatMessageTime(message.createdAt)}</time> 
             </div>
-            <div className={`chat-bubble ${ChatBubble}`}>
+            <div className={`chat-bubble ${ChatBubble} ${shakeClass}`}>
                 {message.message}
             </div>
             <div className="chat-footer">{message.status}</div>
