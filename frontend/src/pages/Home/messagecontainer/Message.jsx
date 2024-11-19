@@ -1,6 +1,6 @@
 import './Message.css'; 
-import { useAuthContext } from '../../../context/AuthContext.jsx';
-import { formatMessageTime } from '../../../utils/date.js'; 
+import { useAuthContext } from '../../../../context/AuthContext.jsx';
+import { formatMessageTime } from '../../../../utils/date.js'; 
 
 const Message = ({ message }) => {
     const { authUser } = useAuthContext();

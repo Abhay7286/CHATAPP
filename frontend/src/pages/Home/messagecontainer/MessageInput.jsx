@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiSend } from 'react-icons/fi';
 import './MessageInput.css';
-import UseSendMessage from '../../../hooks/UseSendMessage';
+import UseSendMessage from '../../../../hooks/UseSendMessage';
 import { FaSpinner } from "react-icons/fa";
 
 const MessageInput = ({ onSend }) => {

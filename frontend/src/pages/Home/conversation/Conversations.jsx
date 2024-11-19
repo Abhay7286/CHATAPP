@@ -1,8 +1,8 @@
 import React from 'react';
 import Conversation from './Conversation.jsx';
-import UseGetConversation from '../../../hooks/UseGetConversation.js';
+import UseGetConversation from '../../../../hooks/UseGetConversation.js';
 import {FaSpinner} from "react-icons/fa";
-import {getRandomEmoji} from "../../../utils/emoji.js";
+import {getRandomEmoji} from "../../../../utils/emoji.js";
 
 
 const Conversations = ({ onUserClick }) => {

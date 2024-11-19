@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Signup.css'; 
 import { useState } from 'react';
-import UseSignUp from '../../hooks/UseSignUp';
+import UseSignUp from '../../../hooks/UseSignUp.js';
 import { FaSpinner } from "react-icons/fa";
 
 const Signup = () => {

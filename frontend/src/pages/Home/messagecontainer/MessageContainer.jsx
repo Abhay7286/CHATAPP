@@ -3,7 +3,7 @@ import Messages from './Messages.jsx';
 import './MessageContainer.css';
 import MessageInput from './MessageInput.jsx';
 import { FiMessageCircle } from 'react-icons/fi';
-import useConversation from '../../../zustand/UseConversation.js';
+import useConversation from '../../../../zustand/UseConversation.js';
 
 const MessageContainer = ({ selectedUser }) => {
   const {selectedConversation,setSelectedConversation} = useConversation()

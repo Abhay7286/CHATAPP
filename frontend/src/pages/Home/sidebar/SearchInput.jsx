@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoSearchCircleSharp } from "react-icons/io5";
-import UseConversation from "../../../zustand/UseConversation.js";
-import UseGetConversation from "../../../hooks/UseGetConversation.js";
+import UseConversation from "../../../../zustand/UseConversation.js";
+import UseGetConversation from "../../../../hooks/UseGetConversation.js";
 import './SearchInput.css'
 import toast from 'react-hot-toast';
 

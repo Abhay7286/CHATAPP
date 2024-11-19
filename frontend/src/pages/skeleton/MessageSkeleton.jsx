@@ -1,4 +1,3 @@
-// MessageSkeleton.jsx
 import React from 'react';
 import './MessageSkeleton.css';
 
