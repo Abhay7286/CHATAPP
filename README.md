@@ -1,7 +1,7 @@
 TuxChat 🐧
 A sleek and modern chat application designed for seamless real-time communication.
 
-Deployed Link: TuxChat on Render
+Deployed Link: https://tux-chat.onrender.com/
 
 Features 🚀
 Real-Time Messaging: Instant communication powered by WebSockets.
