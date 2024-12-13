@@ -77,8 +77,8 @@ git push origin feature-name
 Open a pull request.
 Contact 📬
 GitHub: @Abhay7286
-LinkedIn: @Abhay-Mishra
-Email: agra ntm ac@gmail.com
+LinkedIn: abhay~mishra
+Email: abhaymishra7286@gmail.com
 License 📜
 This project is licensed under the MIT License. See the LICENSE file for details.
 
